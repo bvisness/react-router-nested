@@ -62,6 +62,7 @@ const MyRoute = withRouter((props) => {
   // withRouter passes in the match, location, and history props
   const path = `${rightTrimSlash(props.match.path)}/${leftTrimSlash(props.path)}`;
 
+  // "thin" means to keep all normal react-router behavior, but with a nested path
   if (props.thin) {
     return <Route {...props} path={ path } />
   }
